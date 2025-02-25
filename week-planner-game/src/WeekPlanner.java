@@ -15,6 +15,57 @@ public class WeekPlanner {
 
         fillTheDays(weekDays);
 
+        while (true) {
+
+            System.out.println("Please, input the day of the week:");
+            day = scanner.nextLine().trim();
+
+            if (day.equalsIgnoreCase("exit")) {
+                break;
+            } else if (day.startsWith("change")) {
+                System.out.println(changeTask(day, weekDays));
+            } else {
+                // BURA QALIB
+//                System.out.println(showTask(day, weekDays));
+            }
+        }
+
+    }
+
+    private static String changeTask(String day, String[][] weekDays) {
+
+        switch (day.substring(6).toLowerCase().trim()) {
+            case "monday":
+                System.out.println("Please, input new task for Monday:");
+                weekDays[0][1] = scanner.nextLine().trim();
+                return weekDays[0][1];
+            case "tuesday":
+                System.out.println("Please, input new task for Tuesday:");
+                weekDays[1][1] = scanner.nextLine().trim();
+                return weekDays[1][1];
+            case "wednesday":
+                System.out.println("Please, input new task for Wednesday:");
+                weekDays[2][1] = scanner.nextLine().trim();
+                return weekDays[2][1];
+            case "thursday":
+                System.out.println("Please, input new task for Thursday:");
+                weekDays[3][1] = scanner.nextLine().trim();
+                return weekDays[3][1];
+            case "friday":
+                System.out.println("Please, input new task for Friday:");
+                weekDays[4][1] = scanner.nextLine().trim();
+                return weekDays[4][1];
+            case "saturday":
+                System.out.println("Please, input new task for Saturday:");
+                weekDays[5][1] = scanner.nextLine().trim();
+                return weekDays[5][1];
+            case "sunday":
+                System.out.println("Please, input new task for Sunday:");
+                weekDays[6][1] = scanner.nextLine().trim();
+                return weekDays[6][1];
+            default:
+                return "Sorry, I don't understand you, please try again.";
+        }
 
     }
 
