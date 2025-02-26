@@ -78,6 +78,7 @@ public class WeekPlanner {
 
     }
 
+
     private static void fillTheDays(String[][] weekDays) {
         weekDays[0][0] = "Monday";
         weekDays[0][1] = "Go To Work; Go To Cinema";
